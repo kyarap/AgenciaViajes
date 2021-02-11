@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgenciaServices", "..\AgenciaServices\AgenciaServices.csproj", "{E816DD6C-AA48-48B5-87FA-6D568665D044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgenciaDAL", "..\AgenciaDAL\AgenciaDAL.csproj", "{5E7AEEDF-F8D8-40D9-8C37-3E1196647DFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgenciaVObjetos", "..\AgenciaVObjetos\AgenciaVObjetos.csproj", "{9A9640D7-EF19-436C-B1E3-A991D0F1EEEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgenciaNegocios", "..\AgenciaNegocios\AgenciaNegocios.csproj", "{98AB4853-6CA7-4369-908F-F09DD20E56C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppAgenciaViajes", "..\AppAgenciaViajes\AppAgenciaViajes.csproj", "{D9E69052-80C6-4BB2-846F-B6B7C3D72AD2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E816DD6C-AA48-48B5-87FA-6D568665D044} = {E816DD6C-AA48-48B5-87FA-6D568665D044}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{803E9FA0-6A18-4EF5-A27D-01D1C648C1C7}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Script\01_AgenciaViajes_KY.sql = ..\..\Script\01_AgenciaViajes_KY.sql
+		..\..\Script\02_SpConsultarPais.sql = ..\..\Script\02_SpConsultarPais.sql
+		..\..\Script\03_SpConsultarTipoDoc.sql = ..\..\Script\03_SpConsultarTipoDoc.sql
+		..\..\Script\04_SpCiudadConsultar.sql = ..\..\Script\04_SpCiudadConsultar.sql
+		..\..\Script\05_SpPasajeroInsertar.sql = ..\..\Script\05_SpPasajeroInsertar.sql
+		..\..\Script\06_SpPasajeroInsertar.sql = ..\..\Script\06_SpPasajeroInsertar.sql
+		..\..\Script\07_SpConsultarPais.sql = ..\..\Script\07_SpConsultarPais.sql
+		..\..\Script\08_SpViajeInsertar.sql = ..\..\Script\08_SpViajeInsertar.sql
+		..\..\Script\09_SpPaisInsertar.sql = ..\..\Script\09_SpPaisInsertar.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentación", "Documentación", "{A5E446A0-78E9-4077-A940-29835C5291B9}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Prueba de desarrollo 3 - TEORICA.docx = ..\..\Prueba de desarrollo 3 - TEORICA.docx
+		..\..\Documentacion\Pruebas Unitarias.docx = ..\..\Documentacion\Pruebas Unitarias.docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E816DD6C-AA48-48B5-87FA-6D568665D044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E816DD6C-AA48-48B5-87FA-6D568665D044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E816DD6C-AA48-48B5-87FA-6D568665D044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E816DD6C-AA48-48B5-87FA-6D568665D044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7AEEDF-F8D8-40D9-8C37-3E1196647DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7AEEDF-F8D8-40D9-8C37-3E1196647DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7AEEDF-F8D8-40D9-8C37-3E1196647DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7AEEDF-F8D8-40D9-8C37-3E1196647DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9640D7-EF19-436C-B1E3-A991D0F1EEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9640D7-EF19-436C-B1E3-A991D0F1EEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9640D7-EF19-436C-B1E3-A991D0F1EEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9640D7-EF19-436C-B1E3-A991D0F1EEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98AB4853-6CA7-4369-908F-F09DD20E56C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98AB4853-6CA7-4369-908F-F09DD20E56C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98AB4853-6CA7-4369-908F-F09DD20E56C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98AB4853-6CA7-4369-908F-F09DD20E56C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E69052-80C6-4BB2-846F-B6B7C3D72AD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E69052-80C6-4BB2-846F-B6B7C3D72AD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E69052-80C6-4BB2-846F-B6B7C3D72AD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E69052-80C6-4BB2-846F-B6B7C3D72AD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3582B5F3-5432-43CB-9AAE-DBB54F1203E1}
+	EndGlobalSection
+EndGlobal

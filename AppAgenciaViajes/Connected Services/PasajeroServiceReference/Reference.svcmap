@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="980a53ee-c586-4478-86ee-7bf4a324f29e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50588/SvcPasajero.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SvcPasajero.disco" MetadataType="Disco" ID="4d0dce83-5635-4b4c-857a-19ecf071935c" SourceId="1" SourceUrl="http://localhost:50588/SvcPasajero.svc?disco" />
+    <MetadataFile FileName="SvcPasajero.xsd" MetadataType="Schema" ID="ad522c65-cc3d-42a1-849a-53d50c6791c0" SourceId="1" SourceUrl="http://localhost:50588/SvcPasajero.svc?xsd=xsd1" />
+    <MetadataFile FileName="SvcPasajero1.xsd" MetadataType="Schema" ID="b3b17ce1-8139-49ff-9b4b-105bf3858cfe" SourceId="1" SourceUrl="http://localhost:50588/SvcPasajero.svc?xsd=xsd2" />
+    <MetadataFile FileName="SvcPasajero.wsdl" MetadataType="Wsdl" ID="937c6d47-e427-4ff5-854c-1fa108866c14" SourceId="1" SourceUrl="http://localhost:50588/SvcPasajero.svc?wsdl" />
+    <MetadataFile FileName="SvcPasajero2.xsd" MetadataType="Schema" ID="1eb61bc9-d0b3-41ed-8f82-ea15f21d3d1f" SourceId="1" SourceUrl="http://localhost:50588/SvcPasajero.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

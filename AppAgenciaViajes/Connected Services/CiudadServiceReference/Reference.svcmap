@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="31b091d5-f590-41a9-ae61-ee144bc52f14" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50588/SvcCiudad.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SvcCiudad.disco" MetadataType="Disco" ID="0305110c-354b-4d03-9774-afde810ae232" SourceId="1" SourceUrl="http://localhost:50588/SvcCiudad.svc?disco" />
+    <MetadataFile FileName="SvcCiudad.xsd" MetadataType="Schema" ID="6a4fb8a1-b68f-481a-a8e1-3b40e7c40dca" SourceId="1" SourceUrl="http://localhost:50588/SvcCiudad.svc?xsd=xsd0" />
+    <MetadataFile FileName="SvcCiudad.wsdl" MetadataType="Wsdl" ID="5f0e389f-cdcc-4139-a35f-dacbe3d7b7a2" SourceId="1" SourceUrl="http://localhost:50588/SvcCiudad.svc?wsdl" />
+    <MetadataFile FileName="SvcCiudad1.xsd" MetadataType="Schema" ID="00615331-6f4f-4778-a184-ac8aa2523145" SourceId="1" SourceUrl="http://localhost:50588/SvcCiudad.svc?xsd=xsd2" />
+    <MetadataFile FileName="SvcCiudad2.xsd" MetadataType="Schema" ID="9637c4fc-5fb9-4953-ad7c-87f82aac7f78" SourceId="1" SourceUrl="http://localhost:50588/SvcCiudad.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
