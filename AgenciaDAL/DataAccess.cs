@@ -29,7 +29,7 @@ namespace AgenciaDAL
             }
             catch (Exception ex)
             {
-                return null;
+                throw new Exception("Error de conexion", ex);
 
             }
             
