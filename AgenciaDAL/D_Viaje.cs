@@ -29,16 +29,16 @@ namespace AgenciaDAL
                     PasajeroID = Convert.ToInt32(dataT.Rows[i]["PasajeroID"]),
                     PasajeroNombre = dataT.Rows[i]["PasajeroNombre"].ToString(),
                     PasajeroApellido = dataT.Rows[i]["PasajeroApellido"].ToString(),
-                                       
-
-
-
                     PaisOrigenID = Convert.ToInt32(dataT.Rows[i]["PaisOrigenID"]),
                     CiudadOrigenID = Convert.ToInt32(dataT.Rows[i]["CiudadOrigenID"]),
                     PaisDestinoID = Convert.ToInt32(dataT.Rows[i]["PaisDestinoID"]),
                     CiudadDestinoID = Convert.ToInt32(dataT.Rows[i]["CiudadDestinoID"]),
-                    ServicioAdicionalID = Convert.ToInt32(dataT.Rows[i]["ServicioAdicionalID"]),
-                    ViajeDeFecha = Convert.ToDateTime(dataT.Rows[i]["ViajeDeFecha"])
+                    ViajeDeFecha = Convert.ToDateTime(dataT.Rows[i]["ViajeDeFecha"]),
+                    Estado = Convert.ToBoolean(dataT.Rows[i]["Estado"]),
+                    TipoServicioID = Convert.ToInt32(dataT.Rows[i]["TipoServicioID"]),
+                    NumeroDeMaletas = Convert.ToDouble(dataT.Rows[i]["NumeroDeMaletas"])
+
+
                 });
             }
 
@@ -56,12 +56,13 @@ namespace AgenciaDAL
                 SqlCommand cmd = new SqlCommand(spName, conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@PasajeroID", item.PasajeroID);
-                cmd.Parameters.AddWithValue("@PaisOrigenID", item.PaisOrigenID);
                 cmd.Parameters.AddWithValue("@ViajeDeFecha", item.ViajeDeFecha);
                 cmd.Parameters.AddWithValue("@CiudadOrigenID", item.CiudadOrigenID);
-                cmd.Parameters.AddWithValue("@PaisDestinoID", item.PaisDestinoID);
                 cmd.Parameters.AddWithValue("@CiudadDestinoID", item.CiudadDestinoID);
-                cmd.Parameters.AddWithValue("@ServicioAdicionalID", item.ServicioAdicionalID);
+                cmd.Parameters.AddWithValue("@TipoServicioID", item.TipoServicioID);
+                cmd.Parameters.AddWithValue("@Estado", item.Estado);
+                cmd.Parameters.AddWithValue("@NumeroDeMaletas", item.NumeroDeMaletas);
+
 
                 cmd.ExecuteNonQuery();
                 return true;

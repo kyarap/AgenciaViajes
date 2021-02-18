@@ -13,5 +13,9 @@ namespace AgenciaServices
     {
         [OperationContract]
         List<AgenciaVObjetos.Ciudad> Consultar();
+
+        [OperationContract]
+        List<AgenciaVObjetos.Ciudad> ConsultarCiudadXPais(int idPais);
+
     }
 }

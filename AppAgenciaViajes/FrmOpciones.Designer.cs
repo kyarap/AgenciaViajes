@@ -29,20 +29,20 @@ namespace AppAgenciaViajes
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAgregarPais = new System.Windows.Forms.Button();
+            this.btnMnuParametrica = new System.Windows.Forms.Button();
             this.btnAgregarPasajero = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnAgregarPais
+            // btnMnuParametrica
             // 
-            this.btnAgregarPais.Location = new System.Drawing.Point(221, 185);
-            this.btnAgregarPais.Name = "btnAgregarPais";
-            this.btnAgregarPais.Size = new System.Drawing.Size(129, 23);
-            this.btnAgregarPais.TabIndex = 0;
-            this.btnAgregarPais.Text = "Agregar Pais";
-            this.btnAgregarPais.UseVisualStyleBackColor = true;
-            this.btnAgregarPais.Click += new System.EventHandler(this.btnAgregarPais_Click);
+            this.btnMnuParametrica.Location = new System.Drawing.Point(221, 185);
+            this.btnMnuParametrica.Name = "btnMnuParametrica";
+            this.btnMnuParametrica.Size = new System.Drawing.Size(129, 23);
+            this.btnMnuParametrica.TabIndex = 0;
+            this.btnMnuParametrica.Text = "Parametricas";
+            this.btnMnuParametrica.UseVisualStyleBackColor = true;
+            this.btnMnuParametrica.Click += new System.EventHandler(this.btnMnuParametrica_Click);
             // 
             // btnAgregarPasajero
             // 
@@ -50,7 +50,7 @@ namespace AppAgenciaViajes
             this.btnAgregarPasajero.Name = "btnAgregarPasajero";
             this.btnAgregarPasajero.Size = new System.Drawing.Size(129, 23);
             this.btnAgregarPasajero.TabIndex = 1;
-            this.btnAgregarPasajero.Text = "Agregar Pasajero";
+            this.btnAgregarPasajero.Text = "Registro de Viaje";
             this.btnAgregarPasajero.UseVisualStyleBackColor = true;
             this.btnAgregarPasajero.Click += new System.EventHandler(this.btnAgregarPasajero_Click);
             // 
@@ -72,7 +72,7 @@ namespace AppAgenciaViajes
             this.ClientSize = new System.Drawing.Size(549, 378);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregarPasajero);
-            this.Controls.Add(this.btnAgregarPais);
+            this.Controls.Add(this.btnMnuParametrica);
             this.Name = "FrmOpciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmOpciones";
@@ -83,7 +83,7 @@ namespace AppAgenciaViajes
 
         #endregion
 
-        private System.Windows.Forms.Button btnAgregarPais;
+        private System.Windows.Forms.Button btnMnuParametrica;
         private System.Windows.Forms.Button btnAgregarPasajero;
         private System.Windows.Forms.Label label1;
     }

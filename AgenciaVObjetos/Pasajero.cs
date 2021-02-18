@@ -44,5 +44,7 @@ namespace AgenciaVObjetos
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         [DataType(DataType.Date)]
         public DateTime PasajeroFecha { get; set; }
+
+        public List<Maleta> Maletas { get; set; }
     }
 }

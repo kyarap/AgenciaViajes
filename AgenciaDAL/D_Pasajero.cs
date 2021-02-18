@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -41,7 +42,7 @@ namespace AgenciaDAL
             return resultado;
         }
 
-        public bool insertar(string spName, AgenciaVObjetos.Pasajero item)
+        public int insertar(string spName, AgenciaVObjetos.Pasajero item)
         {
             try
             {
@@ -58,12 +59,17 @@ namespace AgenciaDAL
                 cmd.Parameters.AddWithValue("@TipoDocumentoID", item.TipoDocumentoID);
                 cmd.Parameters.AddWithValue("@NumDocumento", item.NumDocumento);
 
-                cmd.ExecuteNonQuery();
-                return true;
+                DataTable dt = new DataTable();
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                adp.Fill(dt);
+                conn.Close();
+                conn.Dispose();
+                
+                return Convert.ToInt32(dt.Rows[0][0]);
             }
             catch (Exception ex)
             {
-                return false;
+                return -1;
             }
         }
 

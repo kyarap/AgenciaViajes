@@ -15,18 +15,18 @@ namespace AppAgenciaViajes
         public FrmOpciones()
         {
             InitializeComponent();
-        }
+        }            
 
-        private void btnAgregarPais_Click(object sender, EventArgs e)
+        private void btnMnuParametrica_Click(object sender, EventArgs e)
         {
-            FrmPais FormularioPais = new FrmPais();
-            FormularioPais.Show();
+            FrmParametricas FormParam = new FrmParametricas();
+            FormParam.Show();
         }
 
         private void btnAgregarPasajero_Click(object sender, EventArgs e)
         {
-            FrmDatosViaje FormularioViaje = new FrmDatosViaje();
-            FormularioViaje.Show();
+            FrmDatosViaje formViaje = new FrmDatosViaje();
+            formViaje.Show();
         }
     }
 }

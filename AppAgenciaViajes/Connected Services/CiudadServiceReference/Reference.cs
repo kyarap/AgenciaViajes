@@ -127,10 +127,16 @@ namespace AppAgenciaViajes.CiudadServiceReference {
     public interface ISvcCiudad {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcCiudad/Consultar", ReplyAction="http://tempuri.org/ISvcCiudad/ConsultarResponse")]
-        System.Collections.Generic.List<AppAgenciaViajes.CiudadServiceReference.Ciudad> Consultar();
+        AppAgenciaViajes.CiudadServiceReference.Ciudad[] Consultar();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcCiudad/Consultar", ReplyAction="http://tempuri.org/ISvcCiudad/ConsultarResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<AppAgenciaViajes.CiudadServiceReference.Ciudad>> ConsultarAsync();
+        System.Threading.Tasks.Task<AppAgenciaViajes.CiudadServiceReference.Ciudad[]> ConsultarAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcCiudad/ConsultarCiudadXPais", ReplyAction="http://tempuri.org/ISvcCiudad/ConsultarCiudadXPaisResponse")]
+        AppAgenciaViajes.CiudadServiceReference.Ciudad[] ConsultarCiudadXPais(int idPais);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISvcCiudad/ConsultarCiudadXPais", ReplyAction="http://tempuri.org/ISvcCiudad/ConsultarCiudadXPaisResponse")]
+        System.Threading.Tasks.Task<AppAgenciaViajes.CiudadServiceReference.Ciudad[]> ConsultarCiudadXPaisAsync(int idPais);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -160,12 +166,20 @@ namespace AppAgenciaViajes.CiudadServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public System.Collections.Generic.List<AppAgenciaViajes.CiudadServiceReference.Ciudad> Consultar() {
+        public AppAgenciaViajes.CiudadServiceReference.Ciudad[] Consultar() {
             return base.Channel.Consultar();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<AppAgenciaViajes.CiudadServiceReference.Ciudad>> ConsultarAsync() {
+        public System.Threading.Tasks.Task<AppAgenciaViajes.CiudadServiceReference.Ciudad[]> ConsultarAsync() {
             return base.Channel.ConsultarAsync();
+        }
+        
+        public AppAgenciaViajes.CiudadServiceReference.Ciudad[] ConsultarCiudadXPais(int idPais) {
+            return base.Channel.ConsultarCiudadXPais(idPais);
+        }
+        
+        public System.Threading.Tasks.Task<AppAgenciaViajes.CiudadServiceReference.Ciudad[]> ConsultarCiudadXPaisAsync(int idPais) {
+            return base.Channel.ConsultarCiudadXPaisAsync(idPais);
         }
     }
 }

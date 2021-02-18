@@ -46,10 +46,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ciudad.cs" />
+    <Compile Include="Maleta.cs" />
     <Compile Include="Pasajero.cs" />
     <Compile Include="Pais.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioAdicional.cs" />
+    <Compile Include="ServicioAdicionalXMaleta.cs" />
     <Compile Include="TipoDocumento.cs" />
+    <Compile Include="TipoServicio.cs" />
     <Compile Include="Viaje.cs" />
   </ItemGroup>
   <ItemGroup>

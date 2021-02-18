@@ -24,5 +24,18 @@ namespace AgenciaVObjetos
         
         public int ServicioAdicionalID { get; set; }
         public DateTime ViajeDeFecha { get; set; }
-}
+
+        public bool Estado { get; set;  }
+
+         public int TipoServicioID { get; set; }
+
+        public double NumeroDeMaletas { get; set; }
+
+        public Pasajero Pasajero { get; set; }
+
+
+
+
+
+    }
 }

@@ -34,5 +34,29 @@ namespace AgenciaDAL
             return resultado;
         }
 
+        public List<AgenciaVObjetos.Ciudad> ConsultarXPais(string spName, int idPais)
+        {
+            // parametros
+            Dictionary<string, dynamic> parametros = new Dictionary<string, dynamic>();
+            parametros.Add("@PaisID", idPais);
+            var dataT = ConsultarProcedimiento(spName, parametros);
+            List<AgenciaVObjetos.Ciudad> resultado = new List<AgenciaVObjetos.Ciudad>();
+            for (int i=0; i<dataT.Rows.Count; i++) 
+            {
+                resultado.Add(new AgenciaVObjetos.Ciudad()
+                {
+                    CiudadID = Convert.ToInt32(dataT.Rows[i]["CiudadID"]),
+                    CiudadNombre = dataT.Rows[i]["CiudadNombre"].ToString(),
+                    PaisID = Convert.ToInt32(dataT.Rows[i]["PaisID"]),
+                    //PaisNombre = dataT.Rows[i]["PaisNombre"].ToString(),
+                    CiudadFecha = Convert.ToDateTime(dataT.Rows[i]["CiudadFecha"])
+
+                });
+            }
+
+            return resultado;
+        }
+
+
     }
 }

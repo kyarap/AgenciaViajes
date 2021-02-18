@@ -24,5 +24,13 @@ namespace AgenciaServices
             return data;
 
         }
+
+
+
+        public List<AgenciaVObjetos.Ciudad> ConsultarCiudadXPais(int idPais)
+        {
+            var data = _Ciudad.ConsultarXPais(idPais);
+            return data;
+        }
     }
 }

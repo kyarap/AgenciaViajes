@@ -75,9 +75,13 @@
   <ItemGroup>
     <Compile Include="DataAccess.cs" />
     <Compile Include="D_Ciudad.cs" />
+    <Compile Include="D_Maleta.cs" />
     <Compile Include="D_Pais.cs" />
     <Compile Include="D_Pasajero.cs" />
+    <Compile Include="D_ServicioAdicional.cs" />
+    <Compile Include="D_ServicioAdicionalXMaleta.cs" />
     <Compile Include="D_TipoDocumento.cs" />
+    <Compile Include="D_TipoServicio.cs" />
     <Compile Include="D_Viaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

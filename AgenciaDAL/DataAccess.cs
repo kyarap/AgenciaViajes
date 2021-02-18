@@ -35,7 +35,33 @@ namespace AgenciaDAL
             
         }
 
-        
+        public DataTable ConsultarProcedimiento(string spName, Dictionary<string,dynamic> parameters)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand(spName, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (var param in parameters)
+                {
+                    cmd.Parameters.Add(new SqlParameter(param.Key, param.Value));
+                }
+
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de conexion", ex);
+
+            }
+
+        }
+
+
     }
 }
 

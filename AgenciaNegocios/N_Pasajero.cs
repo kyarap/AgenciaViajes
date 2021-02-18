@@ -20,7 +20,7 @@ namespace AgenciaNegocios
             return _Pasajero.Consultar("SP_PASAJERO_CONSULTAR");
         }
 
-        public bool Guardar(AgenciaVObjetos.Pasajero pasajero)
+        public int Guardar(AgenciaVObjetos.Pasajero pasajero)
         {
             return _Pasajero.insertar("SP_PASAJERO_INSERTAR", pasajero);
         }

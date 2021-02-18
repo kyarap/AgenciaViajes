@@ -16,6 +16,6 @@ namespace AgenciaServices
 
 
         [OperationContract]
-        bool Insertar(AgenciaVObjetos.Pasajero pasajero);
+        int Insertar(AgenciaVObjetos.Pasajero pasajero);
     }
 }

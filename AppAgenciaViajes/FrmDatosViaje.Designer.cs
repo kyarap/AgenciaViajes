@@ -47,6 +47,8 @@ namespace AppAgenciaViajes
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tpDatosViaje = new System.Windows.Forms.TabPage();
+            this.cboTipoServicio = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
@@ -63,33 +65,39 @@ namespace AppAgenciaViajes
             this.label8 = new System.Windows.Forms.Label();
             this.cbPaisOrigen = new System.Windows.Forms.ComboBox();
             this.tpMaleta = new System.Windows.Forms.TabPage();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.gridMaletas = new System.Windows.Forms.DataGridView();
+            this.Alto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Largo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ancho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label20 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.btnContinuarDatosMaleta = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.tpServAdicional = new System.Windows.Forms.TabPage();
+            this.txtServAdicional = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tpResumen = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.gridResumenMaleta = new System.Windows.Forms.DataGridView();
+            this.gridResumenViaje = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
+            this.gridResumenPasajero = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tpViaje.SuspendLayout();
             this.tpDatosPasajero.SuspendLayout();
             this.tpDatosViaje.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaletas)).BeginInit();
             this.tpMaleta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMaletas)).BeginInit();
+            this.tpServAdicional.SuspendLayout();
             this.tpResumen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResumenMaleta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResumenViaje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResumenPasajero)).BeginInit();
             this.SuspendLayout();
             // 
             // tpViaje
@@ -97,8 +105,9 @@ namespace AppAgenciaViajes
             this.tpViaje.Controls.Add(this.tpDatosPasajero);
             this.tpViaje.Controls.Add(this.tpDatosViaje);
             this.tpViaje.Controls.Add(this.tpMaleta);
+            this.tpViaje.Controls.Add(this.tpServAdicional);
             this.tpViaje.Controls.Add(this.tpResumen);
-            this.tpViaje.Location = new System.Drawing.Point(10, 29);
+            this.tpViaje.Location = new System.Drawing.Point(10, 30);
             this.tpViaje.Name = "tpViaje";
             this.tpViaje.SelectedIndex = 2;
             this.tpViaje.Size = new System.Drawing.Size(665, 349);
@@ -135,7 +144,7 @@ namespace AppAgenciaViajes
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Lucida Calligraphy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label18.Location = new System.Drawing.Point(348, 13);
+            this.label18.Location = new System.Drawing.Point(376, 3);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(85, 27);
             this.label18.TabIndex = 8;
@@ -145,7 +154,7 @@ namespace AppAgenciaViajes
             // 
             this.btnPasajeroCancelar.Location = new System.Drawing.Point(567, 256);
             this.btnPasajeroCancelar.Name = "btnPasajeroCancelar";
-            this.btnPasajeroCancelar.Size = new System.Drawing.Size(64, 20);
+            this.btnPasajeroCancelar.Size = new System.Drawing.Size(64, 29);
             this.btnPasajeroCancelar.TabIndex = 3;
             this.btnPasajeroCancelar.Text = "Cancelar";
             this.btnPasajeroCancelar.UseVisualStyleBackColor = true;
@@ -154,7 +163,7 @@ namespace AppAgenciaViajes
             // 
             this.btnPasajeroAceptar.Location = new System.Drawing.Point(472, 256);
             this.btnPasajeroAceptar.Name = "btnPasajeroAceptar";
-            this.btnPasajeroAceptar.Size = new System.Drawing.Size(64, 20);
+            this.btnPasajeroAceptar.Size = new System.Drawing.Size(64, 29);
             this.btnPasajeroAceptar.TabIndex = 7;
             this.btnPasajeroAceptar.Text = "Aceptar";
             this.btnPasajeroAceptar.UseVisualStyleBackColor = true;
@@ -203,7 +212,7 @@ namespace AppAgenciaViajes
             this.cboTipoDocumento.FormattingEnabled = true;
             this.cboTipoDocumento.Location = new System.Drawing.Point(286, 107);
             this.cboTipoDocumento.Name = "cboTipoDocumento";
-            this.cboTipoDocumento.Size = new System.Drawing.Size(104, 21);
+            this.cboTipoDocumento.Size = new System.Drawing.Size(184, 21);
             this.cboTipoDocumento.TabIndex = 3;
             // 
             // label7
@@ -262,6 +271,8 @@ namespace AppAgenciaViajes
             // 
             // tpDatosViaje
             // 
+            this.tpDatosViaje.Controls.Add(this.cboTipoServicio);
+            this.tpDatosViaje.Controls.Add(this.label22);
             this.tpDatosViaje.Controls.Add(this.label19);
             this.tpDatosViaje.Controls.Add(this.dateTimePicker1);
             this.tpDatosViaje.Controls.Add(this.label17);
@@ -285,12 +296,29 @@ namespace AppAgenciaViajes
             this.tpDatosViaje.Text = "Datos del viaje";
             this.tpDatosViaje.UseVisualStyleBackColor = true;
             // 
+            // cboTipoServicio
+            // 
+            this.cboTipoServicio.FormattingEnabled = true;
+            this.cboTipoServicio.Location = new System.Drawing.Point(195, 197);
+            this.cboTipoServicio.Name = "cboTipoServicio";
+            this.cboTipoServicio.Size = new System.Drawing.Size(223, 21);
+            this.cboTipoServicio.TabIndex = 11;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(74, 199);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(84, 13);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "Tipo de Servicio";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Lucida Calligraphy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label19.Location = new System.Drawing.Point(344, 19);
+            this.label19.Location = new System.Drawing.Point(373, 3);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(88, 27);
             this.label19.TabIndex = 9;
@@ -298,15 +326,15 @@ namespace AppAgenciaViajes
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(313, 247);
+            this.dateTimePicker1.Location = new System.Drawing.Point(196, 264);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(184, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(222, 20);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(191, 255);
+            this.label17.Location = new System.Drawing.Point(74, 272);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(77, 13);
             this.label17.TabIndex = 0;
@@ -314,9 +342,9 @@ namespace AppAgenciaViajes
             // 
             // btnViajeAceptar
             // 
-            this.btnViajeAceptar.Location = new System.Drawing.Point(494, 283);
+            this.btnViajeAceptar.Location = new System.Drawing.Point(494, 272);
             this.btnViajeAceptar.Name = "btnViajeAceptar";
-            this.btnViajeAceptar.Size = new System.Drawing.Size(64, 20);
+            this.btnViajeAceptar.Size = new System.Drawing.Size(64, 31);
             this.btnViajeAceptar.TabIndex = 7;
             this.btnViajeAceptar.Text = "Aceptar";
             this.btnViajeAceptar.UseVisualStyleBackColor = true;
@@ -324,24 +352,25 @@ namespace AppAgenciaViajes
             // 
             // nudMaletas
             // 
-            this.nudMaletas.Location = new System.Drawing.Point(313, 218);
+            this.nudMaletas.Location = new System.Drawing.Point(196, 231);
             this.nudMaletas.Name = "nudMaletas";
             this.nudMaletas.Size = new System.Drawing.Size(103, 20);
             this.nudMaletas.TabIndex = 5;
             // 
             // btnViajeCancelar
             // 
-            this.btnViajeCancelar.Location = new System.Drawing.Point(575, 283);
+            this.btnViajeCancelar.Location = new System.Drawing.Point(575, 272);
             this.btnViajeCancelar.Name = "btnViajeCancelar";
-            this.btnViajeCancelar.Size = new System.Drawing.Size(64, 20);
+            this.btnViajeCancelar.Size = new System.Drawing.Size(64, 31);
             this.btnViajeCancelar.TabIndex = 3;
-            this.btnViajeCancelar.Text = "Cancelar";
+            this.btnViajeCancelar.Text = "Atrás";
             this.btnViajeCancelar.UseVisualStyleBackColor = true;
+            this.btnViajeCancelar.Click += new System.EventHandler(this.btnViajeCancelar_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(191, 220);
+            this.label12.Location = new System.Drawing.Point(74, 233);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(87, 13);
             this.label12.TabIndex = 0;
@@ -350,15 +379,16 @@ namespace AppAgenciaViajes
             // cbPaisDestino
             // 
             this.cbPaisDestino.FormattingEnabled = true;
-            this.cbPaisDestino.Location = new System.Drawing.Point(312, 139);
+            this.cbPaisDestino.Location = new System.Drawing.Point(195, 128);
             this.cbPaisDestino.Name = "cbPaisDestino";
-            this.cbPaisDestino.Size = new System.Drawing.Size(185, 21);
+            this.cbPaisDestino.Size = new System.Drawing.Size(223, 21);
             this.cbPaisDestino.TabIndex = 3;
+            this.cbPaisDestino.SelectedIndexChanged += new System.EventHandler(this.cbPaisDestino_SelectedIndexChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(191, 142);
+            this.label11.Location = new System.Drawing.Point(74, 131);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 13);
             this.label11.TabIndex = 0;
@@ -367,15 +397,15 @@ namespace AppAgenciaViajes
             // cbCiudadDestino
             // 
             this.cbCiudadDestino.FormattingEnabled = true;
-            this.cbCiudadDestino.Location = new System.Drawing.Point(312, 178);
+            this.cbCiudadDestino.Location = new System.Drawing.Point(195, 162);
             this.cbCiudadDestino.Name = "cbCiudadDestino";
-            this.cbCiudadDestino.Size = new System.Drawing.Size(185, 21);
+            this.cbCiudadDestino.Size = new System.Drawing.Size(223, 21);
             this.cbCiudadDestino.TabIndex = 4;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(191, 180);
+            this.label10.Location = new System.Drawing.Point(74, 164);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 13);
             this.label10.TabIndex = 0;
@@ -384,7 +414,7 @@ namespace AppAgenciaViajes
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(191, 103);
+            this.label9.Location = new System.Drawing.Point(74, 96);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 13);
             this.label9.TabIndex = 0;
@@ -393,15 +423,15 @@ namespace AppAgenciaViajes
             // cbCiudadOrigen
             // 
             this.cbCiudadOrigen.FormattingEnabled = true;
-            this.cbCiudadOrigen.Location = new System.Drawing.Point(312, 100);
+            this.cbCiudadOrigen.Location = new System.Drawing.Point(195, 93);
             this.cbCiudadOrigen.Name = "cbCiudadOrigen";
-            this.cbCiudadOrigen.Size = new System.Drawing.Size(185, 21);
+            this.cbCiudadOrigen.Size = new System.Drawing.Size(223, 21);
             this.cbCiudadOrigen.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(191, 61);
+            this.label8.Location = new System.Drawing.Point(74, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 0;
@@ -410,26 +440,18 @@ namespace AppAgenciaViajes
             // cbPaisOrigen
             // 
             this.cbPaisOrigen.FormattingEnabled = true;
-            this.cbPaisOrigen.Location = new System.Drawing.Point(312, 58);
+            this.cbPaisOrigen.Location = new System.Drawing.Point(195, 58);
             this.cbPaisOrigen.Name = "cbPaisOrigen";
-            this.cbPaisOrigen.Size = new System.Drawing.Size(185, 21);
+            this.cbPaisOrigen.Size = new System.Drawing.Size(223, 21);
             this.cbPaisOrigen.TabIndex = 1;
+            this.cbPaisOrigen.SelectedIndexChanged += new System.EventHandler(this.cbPaisOrigen_SelectedIndexChanged);
             // 
             // tpMaleta
             // 
-            this.tpMaleta.Controls.Add(this.label21);
-            this.tpMaleta.Controls.Add(this.button5);
-            this.tpMaleta.Controls.Add(this.numericUpDown5);
-            this.tpMaleta.Controls.Add(this.numericUpDown4);
-            this.tpMaleta.Controls.Add(this.numericUpDown3);
-            this.tpMaleta.Controls.Add(this.numericUpDown2);
+            this.tpMaleta.Controls.Add(this.gridMaletas);
             this.tpMaleta.Controls.Add(this.label20);
-            this.tpMaleta.Controls.Add(this.button4);
-            this.tpMaleta.Controls.Add(this.label16);
+            this.tpMaleta.Controls.Add(this.btnContinuarDatosMaleta);
             this.tpMaleta.Controls.Add(this.button3);
-            this.tpMaleta.Controls.Add(this.label15);
-            this.tpMaleta.Controls.Add(this.label14);
-            this.tpMaleta.Controls.Add(this.label13);
             this.tpMaleta.Location = new System.Drawing.Point(4, 22);
             this.tpMaleta.Name = "tpMaleta";
             this.tpMaleta.Padding = new System.Windows.Forms.Padding(3);
@@ -438,121 +460,142 @@ namespace AppAgenciaViajes
             this.tpMaleta.Text = "Datos de la Maleta";
             this.tpMaleta.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // gridMaletas
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(162, 219);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 13);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "Agregar Otro";
+            this.gridMaletas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridMaletas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Alto,
+            this.Largo,
+            this.Ancho,
+            this.Peso});
+            this.gridMaletas.Location = new System.Drawing.Point(23, 59);
+            this.gridMaletas.Name = "gridMaletas";
+            this.gridMaletas.Size = new System.Drawing.Size(566, 150);
+            this.gridMaletas.TabIndex = 16;
             // 
-            // button5
+            // Alto
             // 
-            this.button5.Location = new System.Drawing.Point(242, 215);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(35, 20);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "...";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Alto.HeaderText = "Alto";
+            this.Alto.Name = "Alto";
+            this.Alto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Alto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // numericUpDown5
+            // Largo
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(242, 175);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(103, 20);
-            this.numericUpDown5.TabIndex = 13;
+            this.Largo.HeaderText = "Largo";
+            this.Largo.Name = "Largo";
             // 
-            // numericUpDown4
+            // Ancho
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(242, 145);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(103, 20);
-            this.numericUpDown4.TabIndex = 12;
+            this.Ancho.HeaderText = "Ancho";
+            this.Ancho.Name = "Ancho";
             // 
-            // numericUpDown3
+            // Peso
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(242, 109);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(103, 20);
-            this.numericUpDown3.TabIndex = 11;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(242, 74);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(103, 20);
-            this.numericUpDown2.TabIndex = 10;
+            this.Peso.HeaderText = "Peso";
+            this.Peso.Name = "Peso";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Lucida Calligraphy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label20.Location = new System.Drawing.Point(377, 17);
+            this.label20.Location = new System.Drawing.Point(377, 3);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(87, 27);
             this.label20.TabIndex = 9;
             this.label20.Text = "Paso 3";
             // 
-            // button4
+            // btnContinuarDatosMaleta
             // 
-            this.button4.Location = new System.Drawing.Point(491, 252);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(64, 20);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Agregar Otra";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(159, 76);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(25, 13);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Alto";
+            this.btnContinuarDatosMaleta.Location = new System.Drawing.Point(479, 270);
+            this.btnContinuarDatosMaleta.Name = "btnContinuarDatosMaleta";
+            this.btnContinuarDatosMaleta.Size = new System.Drawing.Size(83, 29);
+            this.btnContinuarDatosMaleta.TabIndex = 3;
+            this.btnContinuarDatosMaleta.Text = "Continuar";
+            this.btnContinuarDatosMaleta.UseVisualStyleBackColor = true;
+            this.btnContinuarDatosMaleta.Click += new System.EventHandler(this.btnContinuarDatosMaleta_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(580, 252);
+            this.button3.Location = new System.Drawing.Point(568, 271);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 20);
+            this.button3.Size = new System.Drawing.Size(64, 29);
             this.button3.TabIndex = 3;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // tpServAdicional
+            // 
+            this.tpServAdicional.Controls.Add(this.txtServAdicional);
+            this.tpServAdicional.Controls.Add(this.label15);
+            this.tpServAdicional.Controls.Add(this.button1);
+            this.tpServAdicional.Controls.Add(this.button2);
+            this.tpServAdicional.Controls.Add(this.label13);
+            this.tpServAdicional.Location = new System.Drawing.Point(4, 22);
+            this.tpServAdicional.Name = "tpServAdicional";
+            this.tpServAdicional.Padding = new System.Windows.Forms.Padding(3);
+            this.tpServAdicional.Size = new System.Drawing.Size(657, 323);
+            this.tpServAdicional.TabIndex = 4;
+            this.tpServAdicional.Text = "Servicio Adicional";
+            this.tpServAdicional.UseVisualStyleBackColor = true;
+            // 
+            // txtServAdicional
+            // 
+            this.txtServAdicional.Location = new System.Drawing.Point(206, 58);
+            this.txtServAdicional.Multiline = true;
+            this.txtServAdicional.Name = "txtServAdicional";
+            this.txtServAdicional.Size = new System.Drawing.Size(226, 44);
+            this.txtServAdicional.TabIndex = 14;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(159, 111);
+            this.label15.Location = new System.Drawing.Point(85, 61);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(34, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Largo";
+            this.label15.Size = new System.Drawing.Size(91, 13);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "Servicio Adicional";
             // 
-            // label14
+            // button1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(159, 147);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Ancho";
+            this.button1.Location = new System.Drawing.Point(453, 248);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 29);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Continuar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(383, 248);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 29);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(159, 182);
+            this.label13.Font = new System.Drawing.Font("Lucida Calligraphy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label13.Location = new System.Drawing.Point(380, 3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Peso";
+            this.label13.Size = new System.Drawing.Size(90, 27);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Paso 4";
             // 
             // tpResumen
             // 
-            this.tpResumen.Controls.Add(this.dataGridView1);
+            this.tpResumen.Controls.Add(this.button4);
+            this.tpResumen.Controls.Add(this.button5);
+            this.tpResumen.Controls.Add(this.gridResumenMaleta);
+            this.tpResumen.Controls.Add(this.gridResumenViaje);
+            this.tpResumen.Controls.Add(this.label14);
+            this.tpResumen.Controls.Add(this.gridResumenPasajero);
             this.tpResumen.Location = new System.Drawing.Point(4, 22);
             this.tpResumen.Name = "tpResumen";
             this.tpResumen.Padding = new System.Windows.Forms.Padding(3);
@@ -561,14 +604,69 @@ namespace AppAgenciaViajes
             this.tpResumen.Text = "Resumen";
             this.tpResumen.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // button4
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(603, 199);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.Text = "dataGridView1";
+            this.button4.Location = new System.Drawing.Point(541, 289);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(83, 29);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Confirmar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(471, 289);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(64, 29);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Atrás";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // gridResumenMaleta
+            // 
+            this.gridResumenMaleta.AllowUserToAddRows = false;
+            this.gridResumenMaleta.AllowUserToDeleteRows = false;
+            this.gridResumenMaleta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridResumenMaleta.Location = new System.Drawing.Point(21, 201);
+            this.gridResumenMaleta.Name = "gridResumenMaleta";
+            this.gridResumenMaleta.Size = new System.Drawing.Size(603, 82);
+            this.gridResumenMaleta.TabIndex = 13;
+            this.gridResumenMaleta.Text = "dataGridView4";
+            // 
+            // gridResumenViaje
+            // 
+            this.gridResumenViaje.AllowUserToAddRows = false;
+            this.gridResumenViaje.AllowUserToDeleteRows = false;
+            this.gridResumenViaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridResumenViaje.Location = new System.Drawing.Point(21, 114);
+            this.gridResumenViaje.Name = "gridResumenViaje";
+            this.gridResumenViaje.Size = new System.Drawing.Size(603, 81);
+            this.gridResumenViaje.TabIndex = 12;
+            this.gridResumenViaje.Text = "dataGridView3";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Lucida Calligraphy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label14.Location = new System.Drawing.Point(375, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 27);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Paso 5";
+            // 
+            // gridResumenPasajero
+            // 
+            this.gridResumenPasajero.AllowUserToAddRows = false;
+            this.gridResumenPasajero.AllowUserToDeleteRows = false;
+            this.gridResumenPasajero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridResumenPasajero.Location = new System.Drawing.Point(21, 33);
+            this.gridResumenPasajero.Name = "gridResumenPasajero";
+            this.gridResumenPasajero.Size = new System.Drawing.Size(603, 75);
+            this.gridResumenPasajero.TabIndex = 5;
+            this.gridResumenPasajero.Text = "dataGridView1";
             // 
             // label1
             // 
@@ -601,12 +699,14 @@ namespace AppAgenciaViajes
             ((System.ComponentModel.ISupportInitialize)(this.nudMaletas)).EndInit();
             this.tpMaleta.ResumeLayout(false);
             this.tpMaleta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMaletas)).EndInit();
+            this.tpServAdicional.ResumeLayout(false);
+            this.tpServAdicional.PerformLayout();
             this.tpResumen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tpResumen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResumenMaleta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResumenViaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridResumenPasajero)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -644,26 +744,34 @@ namespace AppAgenciaViajes
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbPaisOrigen;
         private System.Windows.Forms.TabPage tpMaleta;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnViajeAceptar;
         private System.Windows.Forms.Button btnViajeCancelar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnContinuarDatosMaleta;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.TabPage tpResumen;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridResumenPasajero;
+        private System.Windows.Forms.ComboBox cboTipoServicio;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DataGridView gridMaletas;
+        private System.Windows.Forms.TabPage tpServAdicional;
+        private System.Windows.Forms.TextBox txtServAdicional;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView gridResumenMaleta;
+        private System.Windows.Forms.DataGridView gridResumenViaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Alto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Largo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ancho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peso;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="uqtpOkH2DVQRHId4gOn/raUkr50qYeaxxCVRqj6EVz0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="GWSQjCSZ0vd4TeggtCfpC5FLjPDjmjDa8nLRKE6efMg=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ISvcCiudad">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ISvcCiudad" contract="CiudadServiceReference.ISvcCiudad" bindingType="basicHttpBinding" address="http://localhost:50588/SvcCiudad.svc" bindingConfiguration="BasicHttpBinding_ISvcCiudad">
+    <endpoint name="BasicHttpBinding_ISvcCiudad" contract="CiudadServiceReference.ISvcCiudad" bindingType="basicHttpBinding" address="http://localhost/AgenciaServices/SvcCiudad.svc" bindingConfiguration="BasicHttpBinding_ISvcCiudad">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:50588/SvcCiudad.svc</serializedValue>
+          <serializedValue>http://localhost/AgenciaServices/SvcCiudad.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

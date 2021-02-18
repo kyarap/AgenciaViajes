@@ -58,12 +58,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\MaletaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\PasajeroServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\ServicioAdicionalServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServicioAdicionalXMaletaServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\TipoDocumentoServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TipoServicioServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ViajeServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -92,8 +117,23 @@
     <Compile Include="FrmPais.Designer.cs">
       <DependentUpon>FrmPais.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmParametricas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParametricas.Designer.cs">
+      <DependentUpon>FrmParametricas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoServicio.Designer.cs">
+      <DependentUpon>FrmTipoServicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCiudad.resx">
+      <DependentUpon>FrmCiudad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDatosViaje.resx">
       <DependentUpon>FrmDatosViaje.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +142,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPais.resx">
       <DependentUpon>FrmPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParametricas.resx">
+      <DependentUpon>FrmParametricas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoServicio.resx">
+      <DependentUpon>FrmTipoServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,6 +184,19 @@
     <None Include="Connected Services\CiudadServiceReference\SvcCiudad2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\MaletaServiceReference\AppAgenciaViajes.MaletaServiceReference.Maleta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaletaServiceReference\SvcMaleta.wsdl" />
+    <None Include="Connected Services\MaletaServiceReference\SvcMaleta.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MaletaServiceReference\SvcMaleta1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MaletaServiceReference\SvcMaleta2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\PasajeroServiceReference\AppAgenciaViajes.PasajeroServiceReference.Pasajero.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -151,6 +210,32 @@
     <None Include="Connected Services\PasajeroServiceReference\SvcPasajero2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\AppAgenciaViajes.ServicioAdicionalServiceReference.ServicioAdicional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\SvcServicioAdicional.wsdl" />
+    <None Include="Connected Services\ServicioAdicionalServiceReference\SvcServicioAdicional.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\SvcServicioAdicional1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\SvcServicioAdicional2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\AppAgenciaViajes.ServicioAdicionalXMaletaServiceReference.ServicioAdicionalXMaleta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\SvcServicioAdicionalXMaleta.wsdl" />
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\SvcServicioAdicionalXMaleta.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\SvcServicioAdicionalXMaleta1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\SvcServicioAdicionalXMaleta2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\TipoDocumentoServiceReference\AppAgenciaViajes.TipoDocumentoServiceReference.TipoDocumento.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -162,6 +247,32 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\TipoDocumentoServiceReference\SvcTipoDocumento2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TipoServicioServiceReference\AppAgenciaViajes.TipoServicioServiceReference.TipoServicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\TipoServicioServiceReference\SvcTipoServicio.wsdl" />
+    <None Include="Connected Services\TipoServicioServiceReference\SvcTipoServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TipoServicioServiceReference\SvcTipoServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TipoServicioServiceReference\SvcTipoServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ViajeServiceReference\AppAgenciaViajes.ViajeServiceReference.Viaje.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ViajeServiceReference\SvcViaje.wsdl" />
+    <None Include="Connected Services\ViajeServiceReference\SvcViaje.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ViajeServiceReference\SvcViaje1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ViajeServiceReference\SvcViaje2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -183,8 +294,13 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AgenciaServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\CiudadServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\MaletaServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\PasajeroServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioAdicionalServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\ServicioAdicionalXMaletaServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\TipoDocumentoServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\TipoServicioServiceReference\" />
+    <WCFMetadataStorage Include="Connected Services\ViajeServiceReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\AgenciaServiceReference\SvcPais.disco" />
@@ -242,6 +358,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\CiudadServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaletaServiceReference\SvcMaleta.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaletaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaletaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaletaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ViajeServiceReference\SvcViaje.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ViajeServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ViajeServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ViajeServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\SvcServicioAdicional.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\SvcServicioAdicionalXMaleta.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServicioAdicionalXMaletaServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TipoServicioServiceReference\SvcTipoServicio.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TipoServicioServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TipoServicioServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TipoServicioServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

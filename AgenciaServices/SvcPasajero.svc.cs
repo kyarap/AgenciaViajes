@@ -25,7 +25,7 @@ namespace AgenciaServices
 
         }
 
-        public bool Insertar(AgenciaVObjetos.Pasajero pasajero)
+        public int Insertar(AgenciaVObjetos.Pasajero pasajero)
         {
             var data = _Pasajero.Guardar(pasajero);
             return data;

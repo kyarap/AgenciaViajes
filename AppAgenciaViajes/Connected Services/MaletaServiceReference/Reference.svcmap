@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a9d2aba7-322f-4eab-b352-930f85331eab" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/AgenciaServices/SvcMaleta.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SvcMaleta.xsd" MetadataType="Schema" ID="37b1c39a-d4cb-4542-bc65-1b60f6dbfe6e" SourceId="1" SourceUrl="http://localhost/AgenciaServices/SvcMaleta.svc?xsd=xsd0" />
+    <MetadataFile FileName="SvcMaleta1.xsd" MetadataType="Schema" ID="46147065-98d7-4ad4-aec7-16973988f78c" SourceId="1" SourceUrl="http://localhost/AgenciaServices/SvcMaleta.svc?xsd=xsd2" />
+    <MetadataFile FileName="SvcMaleta2.xsd" MetadataType="Schema" ID="551f33c1-aa87-480e-873d-36bc2b1d1f31" SourceId="1" SourceUrl="http://localhost/AgenciaServices/SvcMaleta.svc?xsd=xsd1" />
+    <MetadataFile FileName="SvcMaleta.wsdl" MetadataType="Wsdl" ID="7c1c95e1-93db-42a7-9c10-95064f19bc31" SourceId="1" SourceUrl="http://localhost/AgenciaServices/SvcMaleta.svc?wsdl" />
+    <MetadataFile FileName="SvcMaleta.disco" MetadataType="Disco" ID="6a2d58d3-0d58-4d3d-bbc4-47b06f7d386d" SourceId="1" SourceUrl="http://localhost/AgenciaServices/SvcMaleta.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

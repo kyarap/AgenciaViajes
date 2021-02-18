@@ -15,7 +15,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -62,21 +62,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SvcCiudad.svc" />
+    <Content Include="SvcMaleta.svc" />
     <Content Include="SvcPais.svc" />
     <Content Include="SvcPasajero.svc" />
+    <Content Include="SvcServicioAdicional.svc" />
+    <Content Include="SvcServicioAdicionalXMaleta.svc" />
     <Content Include="SvcTipoDocumento.svc" />
+    <Content Include="SvcTipoServicio.svc" />
     <Content Include="SvcViaje.svc" />
+    <Content Include="Teste.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ISvcCiudad.cs" />
+    <Compile Include="ISvcMaleta.cs" />
     <Compile Include="ISvcPais.cs" />
     <Compile Include="ISvcPasajero.cs" />
+    <Compile Include="ISvcServicioAdicional.cs" />
+    <Compile Include="ISvcServicioAdicionalXMaleta.cs" />
     <Compile Include="ISvcTipoDocumento.cs" />
+    <Compile Include="ISvcTipoServicio.cs" />
     <Compile Include="ISvcViaje.cs" />
+    <Compile Include="ITeste.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SvcCiudad.svc.cs">
       <DependentUpon>SvcCiudad.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SvcMaleta.svc.cs">
+      <DependentUpon>SvcMaleta.svc</DependentUpon>
     </Compile>
     <Compile Include="SvcPais.svc.cs">
       <DependentUpon>SvcPais.svc</DependentUpon>
@@ -84,11 +97,23 @@
     <Compile Include="SvcPasajero.svc.cs">
       <DependentUpon>SvcPasajero.svc</DependentUpon>
     </Compile>
+    <Compile Include="SvcServicioAdicional.svc.cs">
+      <DependentUpon>SvcServicioAdicional.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SvcServicioAdicionalXMaleta.svc.cs">
+      <DependentUpon>SvcServicioAdicionalXMaleta.svc</DependentUpon>
+    </Compile>
     <Compile Include="SvcTipoDocumento.svc.cs">
       <DependentUpon>SvcTipoDocumento.svc</DependentUpon>
     </Compile>
+    <Compile Include="SvcTipoServicio.svc.cs">
+      <DependentUpon>SvcTipoServicio.svc</DependentUpon>
+    </Compile>
     <Compile Include="SvcViaje.svc.cs">
       <DependentUpon>SvcViaje.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Teste.svc.cs">
+      <DependentUpon>Teste.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +155,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51614</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50588/</IISUrl>
+          <IISUrl>http://localhost/AgenciaServices</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/AgenciaServices</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

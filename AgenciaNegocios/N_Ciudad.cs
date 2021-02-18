@@ -19,5 +19,10 @@ namespace AgenciaNegocios
             return _Ciudad.Consultar("SP_CIUDAD_CONSULTAR");
         }
 
+        public List<AgenciaVObjetos.Ciudad> ConsultarXPais(int idPais)
+        {
+            return _Ciudad.ConsultarXPais("SP_CIUDADXPAIS_CONSULTAR",idPais);
+        }
+
     }
 }

@@ -10,6 +10,7 @@ namespace AgenciaDAL
     public class D_Pais : DataAccess
     {
         private string _conn;
+
         public D_Pais(string connectionString) : base(connectionString)
         {
             _conn = connectionString;

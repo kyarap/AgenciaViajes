@@ -43,9 +43,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="N_Ciudad.cs" />
+    <Compile Include="N_Maleta.cs" />
     <Compile Include="N_Pais.cs" />
     <Compile Include="N_Pasajero.cs" />
+    <Compile Include="N_ServicioAdicional.cs" />
+    <Compile Include="N_ServicioAdicionalXMaleta.cs" />
     <Compile Include="N_TipoDocumento.cs" />
+    <Compile Include="N_TipoServicio.cs" />
     <Compile Include="N_Viaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
